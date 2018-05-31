@@ -1659,39 +1659,37 @@ pre .javascript .function {
   font-family: UKIJ Ekran;
 }
 .my_post_copyright {
-  width: 85%;
-  max-width: 45em;
+  border-left: 3px solid #e5a2b4;
+  max-width: 55em;
   margin: 2.8em auto 0;
-  padding: 0.5em 1em;
-  border: 1px solid #d3d3d3;
-  font-size: 0.93rem;
-  line-height: 1.6em;
+  padding: 2em;
   word-break: break-all;
-  background: rgba(255,255,255,0.4);
+  background: #f9f9f9;
 }
 .my_post_copyright p {
   margin: 0;
+  color: #555;
 }
 .my_post_copyright span {
   display: inline-block;
   width: 5.2em;
-  color: #b5b5b5;
-  font-weight: bold;
+  font-weight: 700;
+  color: #555;
 }
 .my_post_copyright .raw {
   margin-left: 1em;
   width: 5em;
 }
 .my_post_copyright a {
-  color: #808080;
+  color: #555;
   border-bottom: 0;
 }
 .my_post_copyright a:hover {
-  color: #a3d2a3;
+  color: #e5a2b4;
   text-decoration: underline;
 }
 .my_post_copyright:hover .fa-clipboard {
-  color: #000;
+  color: #555;
 }
 .my_post_copyright .post-url:hover {
   font-weight: normal;
@@ -1706,7 +1704,7 @@ pre .javascript .function {
   }
 }
 .my_post_copyright .copy-path:hover {
-  color: #808080;
+  color: #555;
   cursor: pointer;
 }
 .sidebar {
@@ -1985,7 +1983,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfa2c4;
+  background: #98ffc9;
 }
 .links-of-blogroll {
   font-size: 13px;

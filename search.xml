@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[GIT命令--初级使用]]></title>
+    <url>%2F2018%2F05%2F31%2FGIT%E5%91%BD%E4%BB%A4-%E5%88%9D%E7%BA%A7%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[GIT命令 – 初级使用一.Git简单的使用 1.找到一个本地磁盘来创建git的.git文件 cd —跳转路径 pwd —查看路径 2.在当期路径下面创建一个版本库，也就是仓库repository git init 3.这时候呢，你就可以在/e/git下看到一个名为.git的文件夹了，如果没有看到也没关系，因为它是隐藏的呀！注意：千万不要随意修改这里面的文件哦！ 4.然后我们在文件夹内创建一个记事本文件read.txt 5.然后我们回到命令行，输入以下，如图就说明我们添加成功了 **git add** 添加到暂存区 ![](http://img.blog.csdn.net/20170725103425127?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast) **6.然后我们用命令git commit -m来告诉git，把read.txt文件提交到仓库**.-m后面的是提交的注释哦 **git commit -m** 7.如果我们想要查看有没有提交成功，可以使用命令git status来查看 8.现在我在read.txt里添加一行内容：123123，我们使用git status来查看下 git status 上面告诉我们read.txt已经被修改了，但是没有被提交 9.让我们查看一下read.txt里面被修改了一些什么东西呢 **git diff read.txt** 我们可以看到在第一行添加了内容123123 10.接下来我们可以把修改过的文件提交到仓库里了，这一步和之前的提交是一样的 我们使用git add和git commit -m来进行提交 当然，你可以在提交文件之前使用git status来查看一下文件的情况 现在我们已经学习了如何对git进行基本的操作了，让我们继续学习更多的命令吧~ 二.Git的更多使用 1.接下来，我在read.txt里添加了第二行内容 233333. 首先我们先提交一下 这时候是不是已经对这两个提交命令很熟悉了呢！那很棒棒哦如果还不是很熟悉，就要多加练习了哦 2.接下来，我们想要查看下之前添加修改的历史记录了 git log 还可以使用 git log –pretty=oneline注意中间是两个“-”.这样查看是不是更加清晰简洁呢 3.现在让我们来查看一下read.txt里面的内容吧 cat read.txt 4.如果你想要之前的版本了，我们就可以退回去！没错 退回之前的版本 有2个方法可以使我们退回之前的版本 （1）git reset –hard HEAD^ 一个^代表退回一个版本 如果需要退回到上上个版本的话 就使用2个^就好了，但是如果你想退回第一百个版本的话就要使用我们的第二个方法了 （2）git reset –hard HEAD~100 对，就这么简单，是不是更加方便呢！ git reset --hard HEAD^ git reset --hard HEAD~100 然后我们来cat一下 退回了！我们再来看一下log 看到了已经没有之前添加的233333了 5.现在我们想要恢复回来之前退回的内容了，可以使用版本号来进行恢复 git reflog 查看版本号 git reset –hard 版本号 恢复 over~~]]></content>
+      <tags>
+        <tag>GIT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[利用hexo创建属于你的静态博客]]></title>
+    <url>%2F2018%2F05%2F31%2F%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>

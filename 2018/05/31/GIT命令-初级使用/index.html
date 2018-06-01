@@ -87,20 +87,20 @@
 
 
 
-<meta name="description" content="这是我现在学习中遇到的一些常用的Git命令行，把它记录下来。">
+<meta name="description" content="学习中遇到的一些常用的Git命令行，把它记录下来。我将介绍几个基本的，也是常用的 Git 命令，以后绝大多数时间里用到的也就是这几个命令。当然除了命令行，GIT还有很多需要学习的地方。">
 <meta name="keywords" content="GIT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GIT命令--初级使用">
 <meta property="og:url" content="https://nora7l.github.io/2018/05/31/GIT命令-初级使用/index.html">
 <meta property="og:site_name" content="Panda&#39;s Blog">
-<meta property="og:description" content="这是我现在学习中遇到的一些常用的Git命令行，把它记录下来。">
+<meta property="og:description" content="学习中遇到的一些常用的Git命令行，把它记录下来。我将介绍几个基本的，也是常用的 Git 命令，以后绝大多数时间里用到的也就是这几个命令。当然除了命令行，GIT还有很多需要学习的地方。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ovuz0ozqd.bkt.clouddn.com/bg1.jpg">
-<meta property="og:updated_time" content="2018-06-01T03:25:48.684Z">
+<meta property="og:image" content="http://ovuz0ozqd.bkt.clouddn.com/bg.png">
+<meta property="og:updated_time" content="2018-06-01T07:44:44.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GIT命令--初级使用">
-<meta name="twitter:description" content="这是我现在学习中遇到的一些常用的Git命令行，把它记录下来。">
-<meta name="twitter:image" content="http://ovuz0ozqd.bkt.clouddn.com/bg1.jpg">
+<meta name="twitter:description" content="学习中遇到的一些常用的Git命令行，把它记录下来。我将介绍几个基本的，也是常用的 Git 命令，以后绝大多数时间里用到的也就是这几个命令。当然除了命令行，GIT还有很多需要学习的地方。">
+<meta name="twitter:image" content="http://ovuz0ozqd.bkt.clouddn.com/bg.png">
 
 
 
@@ -356,6 +356,17 @@
 
           
           
+             <span id="/2018/05/31/GIT命令-初级使用/" class="leancloud_visitors" data-flag-title="GIT命令--初级使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -370,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  838
+                  704
                 </span>
               
 
@@ -394,7 +405,7 @@
 
           
               <div class="post-description">
-                  这是我现在学习中遇到的一些常用的Git命令行，把它记录下来。
+                  学习中遇到的一些常用的Git命令行，把它记录下来。我将介绍几个基本的，也是常用的 Git 命令，以后绝大多数时间里用到的也就是这几个命令。当然除了命令行，GIT还有很多需要学习的地方。
               </div>
           
 
@@ -414,9 +425,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://ovuz0ozqd.bkt.clouddn.com/bg1.jpg" rel="gallery_cjhvjna610000xsi2ft3rx6wv"
+                 href="http://ovuz0ozqd.bkt.clouddn.com/bg.png" rel="gallery_cjhvjna610000xsi2ft3rx6wv"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://ovuz0ozqd.bkt.clouddn.com/bg1.jpg" itemprop="contentUrl"/>
+                <img src="http://ovuz0ozqd.bkt.clouddn.com/bg.png" itemprop="contentUrl"/>
               </a>
             
           
@@ -428,50 +439,54 @@
 
       
         <a id="more"></a>
-<h2 id="GIT命令-–-初级使用"><a href="#GIT命令-–-初级使用" class="headerlink" title="GIT命令 – 初级使用"></a>GIT命令 – 初级使用</h2><p><strong>一.Git简单的使用</strong></p>
-<p><strong>1.找到一个本地磁盘来创建git的.git文件</strong><br>      <pre>       <strong>cd</strong> —跳转路径<br>       <strong>pwd</strong> —查看路径</pre><br>     <img src="http://img.blog.csdn.net/20170725102428461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>  <strong>2.在当期路径下面创建一个版本库，也就是仓库repository</strong><br>       <pre>       <strong>git init</strong></pre><br>       <img src="http://img.blog.csdn.net/20170725102958510?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>3.这时候呢，你就可以在/e/git下看到一个名为.git的文件夹了，如果没有看到也没关系，因为它是隐藏的呀！注意：千万不要随意修改这里面的文件哦！</strong><br><img src="http://img.blog.csdn.net/20170725103053529?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>4.然后我们在文件夹内创建一个记事本文件read.txt</strong><br><img src="http://img.blog.csdn.net/20170725103201396?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>5.然后我们回到命令行，输入以下，如图就说明我们添加成功了</strong></p>
-  <pre>        **git add**   添加到暂存区  </pre>
-![](http://img.blog.csdn.net/20170725103425127?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
-**6.然后我们用命令git commit -m来告诉git，把read.txt文件提交到仓库**.-m后面的是提交的注释哦
-     <pre>        **git commit -m** </pre>
-
-<p><img src="http://img.blog.csdn.net/20170725110102270?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="">     </p>
-<p><strong>7.如果我们想要查看有没有提交成功，可以使用命令git status来查看</strong></p>
-<p><strong>8.现在我在read.txt里添加一行内容：123123，我们使用git status来查看下</strong><br>  <pre>        <strong>git status</strong></pre><br>  <img src="http://img.blog.csdn.net/20170725110224034?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br>上面告诉我们read.txt已经被修改了，但是没有被提交</p>
-<p><strong>9.让我们查看一下read.txt里面被修改了一些什么东西呢</strong></p>
-   <pre>       **git diff read.txt**</pre>
-
-<p><img src="http://img.blog.csdn.net/20170725110536140?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""><br>我们可以看到在第一行添加了内容123123</p>
-<p><strong>10.接下来我们可以把修改过的文件提交到仓库里了，这一步和之前的提交是一样的</strong><br> 我们使用<strong>git add</strong>和<strong>git commit -m</strong>来进行提交<br> 当然，你可以在提交文件之前使用<strong>git status</strong>来查看一下文件的情况</p>
-<p> <img src="http://img.blog.csdn.net/20170725110637409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>现在我们已经学习了如何对git进行基本的操作了，让我们继续学习更多的命令吧~</p>
-<p><strong>二.Git的更多使用</strong></p>
-<p><strong>1.接下来，我在read.txt里添加了第二行内容 233333. 首先我们先提交一下</strong></p>
-<p><img src="http://img.blog.csdn.net/20170725111040439?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>这时候是不是已经对这两个提交命令很熟悉了呢！那很棒棒哦<br>如果还不是很熟悉，就要多加练习了哦</p>
-<p><strong>2.接下来，我们想要查看下之前添加修改的历史记录了</strong><br> <pre>         <strong>git log</strong></pre><br> <img src="http://img.blog.csdn.net/20170725111202990?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p> 还可以使用 <strong>git log –pretty=oneline</strong><br>注意中间是两个“-”.这样查看是不是更加清晰简洁呢</p>
-<p><img src="http://img.blog.csdn.net/20170725111244857?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>3.现在让我们来查看一下read.txt里面的内容吧</strong><br> <pre>        <strong>cat read.txt</strong></pre><br><img src="http://img.blog.csdn.net/20170725111409197?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>4.如果你想要之前的版本了，我们就可以退回去！没错 退回之前的版本</strong><br> 有2个方法可以使我们退回之前的版本<br> <strong>（1）git reset –hard HEAD^</strong> 一个^代表退回一个版本 如果需要退回到上上个版本的话 就使用2个^就好了，但是如果你想退回第一百个版本的话就要使用我们的第二个方法了<br>  <strong>（2）git reset –hard HEAD~100</strong> 对，就这么简单，是不是更加方便呢！</p>
-<pre>git reset --hard HEAD^
-git reset --hard HEAD~100</pre>
-
-<p> <img src="http://img.blog.csdn.net/20170725111619375?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p><strong>然后我们来cat一下</strong></p>
-<p><img src="http://img.blog.csdn.net/20170725111643438?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>退回了！<br><strong>我们再来看一下log</strong></p>
-<p><img src="http://img.blog.csdn.net/20170725111732675?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>看到了已经没有之前添加的233333了</p>
-<p><strong>5.现在我们想要恢复回来之前退回的内容了，可以使用版本号来进行恢复</strong></p>
-<p><pre> <strong>git reflog</strong> 查看版本号<br> <strong>git reset –hard 版本号</strong> 恢复</pre></p>
-<p><img src="http://img.blog.csdn.net/20170725111912473?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvTmFybzdM/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
-<p>over~~</p>
+<h2 id="Git的使用"><a href="#Git的使用" class="headerlink" title="Git的使用"></a>Git的使用</h2><h3 id="找到一个本地磁盘来创建git的-git文件"><a href="#找到一个本地磁盘来创建git的-git文件" class="headerlink" title="找到一个本地磁盘来创建git的.git文件"></a>找到一个本地磁盘来创建git的.git文件</h3><pre><code>cd  --- 跳转路径
+pwd --- 查看路径
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/1.png" alt="logo"></p>
+<hr>
+<h3 id="在该路径下面创建一个版本库，也就是仓库repository"><a href="#在该路径下面创建一个版本库，也就是仓库repository" class="headerlink" title="在该路径下面创建一个版本库，也就是仓库repository"></a>在该路径下面创建一个版本库，也就是仓库repository</h3><pre><code>git init --- 初始化，创建版本库
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/2.png" alt="logo"></p>
+<p>这时候你就可以在/e/git下看到一个名为.git的文件夹了，如果没有看到也没关系，因为它是隐藏的！注意：千万不要随意修改这里面的文件！</p>
+<p><img src="/2018/05/31/GIT命令-初级使用/3.png" alt="logo"></p>
+<h3 id="我们在文件夹内创建一个记事本文件read-txt"><a href="#我们在文件夹内创建一个记事本文件read-txt" class="headerlink" title="我们在文件夹内创建一个记事本文件read.txt"></a>我们在文件夹内创建一个记事本文件read.txt</h3><pre><code>mkdir                --- window创建文件夹
+type nul &gt; read.txt  --- window创建文件
+touch                --- linux创建文件
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/4.png" alt="logo"></p>
+<h3 id="回到命令行，输入以下，如图就说明我们添加成功了"><a href="#回到命令行，输入以下，如图就说明我们添加成功了" class="headerlink" title="回到命令行，输入以下，如图就说明我们添加成功了"></a>回到命令行，输入以下，如图就说明我们添加成功了</h3><pre><code>git add --- 添加文件到暂存区
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/5.png" alt="logo"></p>
+<h3 id="接着来将read-txt文件提交到仓库"><a href="#接着来将read-txt文件提交到仓库" class="headerlink" title="接着来将read.txt文件提交到仓库"></a>接着来将read.txt文件提交到仓库</h3><pre><code>git commit -m &quot;提交的描述信息&quot;
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/6.png" alt="logo"></p>
+<h3 id="如果我们想要查看有没有提交成功，可以使用命令git-status来查看"><a href="#如果我们想要查看有没有提交成功，可以使用命令git-status来查看" class="headerlink" title="如果我们想要查看有没有提交成功，可以使用命令git status来查看"></a>如果我们想要查看有没有提交成功，可以使用命令git status来查看</h3><pre><code>git status --- 显示工作目录和暂存区的状态
+</code></pre><ul>
+<li>现在我在read.txt里添加一行内容：123123，我们使用git status来查看下</li>
+</ul>
+<p><img src="/2018/05/31/GIT命令-初级使用/7.jpg" alt="logo"></p>
+<p>上面告诉我们 read.txt 已经被修改了，但是没有被提交</p>
+<h3 id="查看一下read-txt里面被修改了一些什么东西"><a href="#查看一下read-txt里面被修改了一些什么东西" class="headerlink" title="查看一下read.txt里面被修改了一些什么东西"></a>查看一下read.txt里面被修改了一些什么东西</h3><pre><code>git diff read.txt --- 差异对比
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/8.png" alt="logo"></p>
+<p>我们可以看到在第一行添加了内容“123123”，接下来我们可以把修改过的文件提交到仓库里了，这一步和之前的提交是一样的</p>
+<h2 id="Git的更多使用"><a href="#Git的更多使用" class="headerlink" title="Git的更多使用"></a>Git的更多使用</h2><h3 id="接下来，我在read-txt里添加了第二行内容-233333-我们先提交一下"><a href="#接下来，我在read-txt里添加了第二行内容-233333-我们先提交一下" class="headerlink" title="接下来，我在read.txt里添加了第二行内容 233333. 我们先提交一下"></a>接下来，我在read.txt里添加了第二行内容 233333. 我们先提交一下</h3><p><img src="/2018/05/31/GIT命令-初级使用/9.png" alt="logo"></p>
+<p>这时候是不是已经对这两个提交命令很熟悉了呢！</p>
+<h3 id="接下来，我们想要查看下之前添加修改的历史记录"><a href="#接下来，我们想要查看下之前添加修改的历史记录" class="headerlink" title="接下来，我们想要查看下之前添加修改的历史记录"></a>接下来，我们想要查看下之前添加修改的历史记录</h3><pre><code>git log --- 查看提交历史
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/10.jpg" alt="logo"></p>
+<p>或者</p>
+<pre><code>git log --pretty=oneline --- 中间是两个“-”
+</code></pre><p>这样查看是不是更加清晰简洁呢</p>
+<p><img src="/2018/05/31/GIT命令-初级使用/11.png" alt="logo"></p>
+<h3 id="如果你想要之前的版本了，我们就可以退回去！"><a href="#如果你想要之前的版本了，我们就可以退回去！" class="headerlink" title="如果你想要之前的版本了，我们就可以退回去！"></a>如果你想要之前的版本了，我们就可以退回去！</h3><p>有2个方法可以使我们退回之前的版本    </p>
+<pre><code>git reset --hard HEAD^
+</code></pre><p>一个^代表退回一个版本 如果需要退回到上上个版本的话 就使用2个^就好了，但是如果你想退回第一百个版本的话就要使用我们的第二个方法了</p>
+<pre><code>git reset --hard HEAD~100
+</code></pre><p>是不是更加方便呢！</p>
+<p><img src="/2018/05/31/GIT命令-初级使用/12.png" alt="logo"></p>
+<p>然后我们来cat一下</p>
+<p><img src="/2018/05/31/GIT命令-初级使用/13.png" alt="logo"></p>
+<p>退回了！<br>我们再来看一下log</p>
+<p><img src="/2018/05/31/GIT命令-初级使用/14.png" alt="logo"></p>
+<p>已经没有之前添加的“233333”了</p>
+<h3 id="现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复"><a href="#现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复" class="headerlink" title="现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复"></a>现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复</h3><pre><code>git reflog       --- 查看版本号
+git reset --hard --- 版本号** 恢复
+</code></pre><p><img src="/2018/05/31/GIT命令-初级使用/15.png" alt="logo"></p>
+<p>就到这里了，上面就是我在项目中遇到的几个git命令，在这方面我还是一个小白，后面会深入学习的~~</p>
 
       
     </div>
@@ -726,7 +741,7 @@ git reset --hard HEAD~100</pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GIT命令-–-初级使用"><span class="nav-number">1.</span> <span class="nav-text">GIT命令 – 初级使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git的使用"><span class="nav-number">1.</span> <span class="nav-text">Git的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#找到一个本地磁盘来创建git的-git文件"><span class="nav-number">1.1.</span> <span class="nav-text">找到一个本地磁盘来创建git的.git文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在该路径下面创建一个版本库，也就是仓库repository"><span class="nav-number">1.2.</span> <span class="nav-text">在该路径下面创建一个版本库，也就是仓库repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我们在文件夹内创建一个记事本文件read-txt"><span class="nav-number">1.3.</span> <span class="nav-text">我们在文件夹内创建一个记事本文件read.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到命令行，输入以下，如图就说明我们添加成功了"><span class="nav-number">1.4.</span> <span class="nav-text">回到命令行，输入以下，如图就说明我们添加成功了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接着来将read-txt文件提交到仓库"><span class="nav-number">1.5.</span> <span class="nav-text">接着来将read.txt文件提交到仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果我们想要查看有没有提交成功，可以使用命令git-status来查看"><span class="nav-number">1.6.</span> <span class="nav-text">如果我们想要查看有没有提交成功，可以使用命令git status来查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看一下read-txt里面被修改了一些什么东西"><span class="nav-number">1.7.</span> <span class="nav-text">查看一下read.txt里面被修改了一些什么东西</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git的更多使用"><span class="nav-number">2.</span> <span class="nav-text">Git的更多使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来，我在read-txt里添加了第二行内容-233333-我们先提交一下"><span class="nav-number">2.1.</span> <span class="nav-text">接下来，我在read.txt里添加了第二行内容 233333. 我们先提交一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来，我们想要查看下之前添加修改的历史记录"><span class="nav-number">2.2.</span> <span class="nav-text">接下来，我们想要查看下之前添加修改的历史记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如果你想要之前的版本了，我们就可以退回去！"><span class="nav-number">2.3.</span> <span class="nav-text">如果你想要之前的版本了，我们就可以退回去！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复"><span class="nav-number">2.4.</span> <span class="nav-text">现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -775,7 +790,7 @@ git reset --hard HEAD~100</pre>
 
 <div class="theme-info">
   <div class="powered-by"></div><i class="fa fa-edit"></i>
-  <span class="post-count" style="padding-left:5px;">字数统计  838  字</span>
+  <span class="post-count" style="padding-left:5px;">字数统计  704  字</span>
 </div>
 
 
@@ -1271,6 +1286,113 @@ git reset --hard HEAD~100</pre>
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

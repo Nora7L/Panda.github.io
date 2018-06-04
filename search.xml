@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo+next 设置首页不显示某些文章]]></title>
+    <url>%2F2018%2F06%2F04%2Fhexo-next-%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%9F%90%E4%BA%9B%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[设置一个参数在这里我设置的参数是notshow，默认为true，我直接把他写入/scaffolds/post.md模板中了，这样会比较方便。利用命令行创建新文章： hexo new &quot;hexo+next设置首页不显示某些文章&quot; 生成的文章内容如下： 修改主题模板修改当前主题下的layout/_macro/post.swig文件，在内容外加入下面的代码 {% if post.notshow and is_home() %} #原来中间的代码 {% endif %} 效果如图： 如果报错可以去掉is_home()。 注意这里虽然因为设置了，没有在首页显示某些文章，但是实际上该文章还是会计入per_page中。目前还没有什么更好的方法解决这个问题，如果大神们有更好的解决方法，请联系我~！]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[D1]]></title>
+    <url>%2F2018%2F06%2F04%2Fhiit%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>hiit</category>
+      </categories>
+      <tags>
+        <tag>hiit</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[GIT命令--初级使用]]></title>
     <url>%2F2018%2F05%2F31%2FGIT%E5%91%BD%E4%BB%A4-%E5%88%9D%E7%BA%A7%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[Git的使用找到一个本地磁盘来创建git的.git文件cd --- 跳转路径 pwd --- 查看路径 在该路径下面创建一个版本库，也就是仓库repositorygit init --- 初始化，创建版本库 这时候你就可以在/e/git下看到一个名为.git的文件夹了，如果没有看到也没关系，因为它是隐藏的！注意：千万不要随意修改这里面的文件！ 我们在文件夹内创建一个记事本文件read.txtmkdir --- window创建文件夹 type nul &gt; read.txt --- window创建文件 touch --- linux创建文件 回到命令行，输入以下，如图就说明我们添加成功了git add --- 添加文件到暂存区 接着来将read.txt文件提交到仓库git commit -m &quot;提交的描述信息&quot; 如果我们想要查看有没有提交成功，可以使用命令git status来查看git status --- 显示工作目录和暂存区的状态 现在我在read.txt里添加一行内容：123123，我们使用git status来查看下 上面告诉我们 read.txt 已经被修改了，但是没有被提交 查看一下read.txt里面被修改了一些什么东西git diff read.txt --- 差异对比 我们可以看到在第一行添加了内容“123123”，接下来我们可以把修改过的文件提交到仓库里了，这一步和之前的提交是一样的 Git的更多使用接下来，我在read.txt里添加了第二行内容 233333. 我们先提交一下 这时候是不是已经对这两个提交命令很熟悉了呢！ 接下来，我们想要查看下之前添加修改的历史记录git log --- 查看提交历史 或者 git log --pretty=oneline --- 中间是两个“-” 这样查看是不是更加清晰简洁呢 如果你想要之前的版本了，我们就可以退回去！有2个方法可以使我们退回之前的版本 git reset --hard HEAD^ 一个^代表退回一个版本 如果需要退回到上上个版本的话 就使用2个^就好了，但是如果你想退回第一百个版本的话就要使用我们的第二个方法了 git reset --hard HEAD~100 是不是更加方便呢！ 然后我们来cat一下 退回了！我们再来看一下log 已经没有之前添加的“233333”了 现在我们想要恢复回来之前退回的内容了，可以使用版本号来恢复git reflog --- 查看版本号 git reset --hard --- 版本号** 恢复 就到这里了，上面就是我在项目中遇到的几个git命令，在这方面我还是一个小白，后面会深入学习的~~]]></content>
+      <categories>
+        <category>GIT</category>
+      </categories>
       <tags>
         <tag>GIT</tag>
       </tags>
@@ -12,6 +34,9 @@
     <title><![CDATA[利用hexo创建属于你的静态博客]]></title>
     <url>%2F2018%2F05%2F31%2F%E5%88%A9%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E5%B1%9E%E4%BA%8E%E4%BD%A0%E7%9A%84%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>

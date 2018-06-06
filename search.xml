@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[webpack--图片打包]]></title>
     <url>%2F2018%2F06%2F06%2Fwebpack-%E5%9B%BE%E7%89%87%E6%89%93%E5%8C%85%2F</url>
-    <content type="text"><![CDATA[前言webpack–图片生产中的几种引用方式HTML文件中img标签的src属性引用或者内嵌样式引用CSS文件中的背景图等JavaScript文件中动态添加或者改变的图片引用ReactJS中图片的引用]]></content>
+    <content type="text"><![CDATA[前言webpack–图片生产中的几种引用方式HTML文件中img标签的src属性引用或者内嵌样式引用CSS文件中的背景图等JavaScript文件中动态添加或者改变的图片引用ReactJS中图片的引用参考文献 https://www.cnblogs.com/ghost-xyx/p/5812902.html https://stackoverflow.com/questions/37313954/how-to-url-loader-multiple-images-in-webpack https://github.com/lengziyu/learn-webpack/issues/2]]></content>
       <categories>
         <category>webpack</category>
       </categories>

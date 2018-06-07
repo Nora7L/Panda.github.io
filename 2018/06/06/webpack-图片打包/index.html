@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Panda&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://nora7l.github.io/2018/06/06/webpack-图片打包/bg.png">
-<meta property="og:updated_time" content="2018-06-06T09:05:21.926Z">
+<meta property="og:updated_time" content="2018-06-07T07:30:38.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack--图片打包">
 <meta name="twitter:image" content="https://nora7l.github.io/2018/06/06/webpack-图片打包/bg.png">
@@ -411,7 +411,7 @@
                       <span class="post-meta-item-text">字数统计&#58;</span>
                     
                     <span title="字数统计">
-                      601
+                      761
                     </span>
                   
 
@@ -427,7 +427,7 @@
                       <span class="post-meta-item-text">阅读时长 &asymp;</span>
                     
                     <span title="阅读时长">
-                      2
+                      3
                     </span>
                   
                 </div>
@@ -483,10 +483,41 @@ loaders: [
 </code></pre><p>test：代表可以匹配的图片类型，除了 png、jpg 和 gif 等，以竖线隔开。</p>
 <p>loaders&gt;limit： 字段代表图片打包限制，不是说超过了限制就不能打包，是指当图片大小小于限制时会自动转成 base64 码引用。上例中，大于8192字节的图片正常打包，小于8192字节的图片以 base64 方式引用。</p>
 <p>loaders&gt;name：指定图片打包的目录与文件名，上例中的 name 字段指定了在打包根目录（output.path）下生成名为 images 的文件夹，并在原图片名前加上8位 hash 值。</p>
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
+<h3 id="单独打包css"><a href="#单独打包css" class="headerlink" title="单独打包css"></a>单独打包css</h3><p>webpack 把所有的资源都当成了一个模块, CSS,Image, JS 字体文件 都是资源, 都可以打包到一个 bundle.js 文件中。我们单独处理css，可以用 <a href="https://github.com/webpack-contrib/extract-text-webpack-plugin" title="extract-text-webpack-plugin" target="_blank" rel="noopener">extract-text-webpack-plugin</a> 把 CSS 分离成文件</p>
+<blockquote>
+<p>$ npm install –save-dev extract-text-webpack-plugin</p>
+</blockquote>
+<p>如果是webpack4,加上下面的就不会报错了</p>
+<blockquote>
+<p>npm install extract-text-webpack-plugin@next –save-dev</p>
+</blockquote>
+<p>webpack.config.js</p>
+<pre><code>const ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);
+module.exports = {
+    entry: &apos;./src/app.js&apos;,
+    output: {
+        path: __dirname + &apos;/dist&apos;,
+        filename: &apos;app.bundle.js&apos;
+    },
+    plugins: [new ExtractTextPlugin(&apos;style.css&apos;)],
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                      fallback: &apos;style-loader&apos;,
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                  use: [&apos;css-loader&apos;, &apos;sass-loader&apos;]
+                })
+              }
+        ]
+    }
+};
+</code></pre><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ul>
 <li><a href="https://www.cnblogs.com/ghost-xyx/p/5812902.html" target="_blank" rel="noopener">https://www.cnblogs.com/ghost-xyx/p/5812902.html</a></li>
 <li><a href="https://stackoverflow.com/questions/37313954/how-to-url-loader-multiple-images-in-webpack" target="_blank" rel="noopener">https://stackoverflow.com/questions/37313954/how-to-url-loader-multiple-images-in-webpack</a></li>
 <li><a href="https://github.com/lengziyu/learn-webpack/issues/2" target="_blank" rel="noopener">https://github.com/lengziyu/learn-webpack/issues/2</a></li>
+<li><a href="https://www.cnblogs.com/zhongxia/p/5834089.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhongxia/p/5834089.html</a></li>
 </ul>
 
           
@@ -752,7 +783,7 @@ loaders: [
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack–图片打包"><span class="nav-number">2.</span> <span class="nav-text">webpack–图片打包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loader"><span class="nav-number">2.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产中的几种引用方式"><span class="nav-number">2.2.</span> <span class="nav-text">生产中的几种引用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML文件中img标签的src属性引用或者内嵌样式引用"><span class="nav-number">2.2.1.</span> <span class="nav-text">HTML文件中img标签的src属性引用或者内嵌样式引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS文件中的背景图等"><span class="nav-number">2.2.2.</span> <span class="nav-text">CSS文件中的背景图等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript文件中动态添加或者改变的图片引用"><span class="nav-number">2.2.3.</span> <span class="nav-text">JavaScript文件中动态添加或者改变的图片引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReactJS中图片的引用"><span class="nav-number">2.2.4.</span> <span class="nav-text">ReactJS中图片的引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在webpack中引入图片"><span class="nav-number">2.3.</span> <span class="nav-text">在webpack中引入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装url-loader"><span class="nav-number">2.3.1.</span> <span class="nav-text">安装url-loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-config-js"><span class="nav-number">2.3.2.</span> <span class="nav-text">配置webpack.config.js</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack–图片打包"><span class="nav-number">2.</span> <span class="nav-text">webpack–图片打包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Loader"><span class="nav-number">2.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产中的几种引用方式"><span class="nav-number">2.2.</span> <span class="nav-text">生产中的几种引用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML文件中img标签的src属性引用或者内嵌样式引用"><span class="nav-number">2.2.1.</span> <span class="nav-text">HTML文件中img标签的src属性引用或者内嵌样式引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS文件中的背景图等"><span class="nav-number">2.2.2.</span> <span class="nav-text">CSS文件中的背景图等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript文件中动态添加或者改变的图片引用"><span class="nav-number">2.2.3.</span> <span class="nav-text">JavaScript文件中动态添加或者改变的图片引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReactJS中图片的引用"><span class="nav-number">2.2.4.</span> <span class="nav-text">ReactJS中图片的引用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在webpack中引入图片"><span class="nav-number">2.3.</span> <span class="nav-text">在webpack中引入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装url-loader"><span class="nav-number">2.3.1.</span> <span class="nav-text">安装url-loader</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack-config-js"><span class="nav-number">2.3.2.</span> <span class="nav-text">配置webpack.config.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单独打包css"><span class="nav-number">2.3.3.</span> <span class="nav-text">单独打包css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
@@ -801,7 +832,7 @@ loaders: [
 
 <div class="theme-info">
   <div class="powered-by"></div><i class="fa fa-edit"></i>
-  <span class="post-count" style="padding-left:5px;">字数统计  2.1k  字</span>
+  <span class="post-count" style="padding-left:5px;">字数统计  2.3k  字</span>
 </div>
 
 

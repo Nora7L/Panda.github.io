@@ -2103,7 +2103,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aff;
+  background: #17ffd6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2946,4 +2946,11 @@ embed {
   padding: 25px;
   -webkit-box-shadow: 0 0 14px #cacbcb;
   -moz-box-shadow: 0 0 14px #cacbcb;
+}
+.about_music {
+  background-color: #fff;
+  opacity: 0.8;
+  box-shadow: 1px 1px 5px #ccc, -1px -1px 5px #ccc;
+  padding: 20px;
+  margin-top: 50px;
 }

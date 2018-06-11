@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[ES6--可爱的新特性]]></title>
     <url>%2F2018%2F06%2F11%2FES6-%E5%8F%AF%E7%88%B1%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
-    <content type="text"><![CDATA[涉及到的知识点 变量声明 模板字符串 函数 拓展的对象功能 更方便的数据访问–解构 Spread Operator 展开运算符 import 和 export Promise Generators]]></content>
+    <content type="text"><![CDATA[涉及到的知识点 变量声明 模板字符串 函数 拓展的对象功能 更方便的数据访问–解构 Spread Operator 展开运算符 import 和 export Promise Generators 变量声明]]></content>
       <categories>
         <category>ES6</category>
       </categories>

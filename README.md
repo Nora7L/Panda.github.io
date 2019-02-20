@@ -1,1 +1,1 @@
-blog: https://nora7l.github.io/
+blog: https://pandaseven.github.io/class/
